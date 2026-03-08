@@ -4,8 +4,8 @@ function App() {
       <h1>Web Tasarımı ve Programlama</h1>
       <h2>LAB-1</h2>
       <hr />
-      <p><strong>Ad Soyad:</strong> [اكتب اسمك هنا]</p>
-      <p><strong>Öğrenci No:</strong> [اكتب رقمك الجامعي هنا]</p>
+      <p><strong>Ad Soyad:</strong>ZID ALKHANI</p>
+      <p><strong>Öğrenci No:</strong>225541609</p>
     </div>
   )
 }
