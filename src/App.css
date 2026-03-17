@@ -102,7 +102,7 @@ input {
 }
 
 .submit-btn:hover {
-  background: var(--color-secondary); /* [cite: 1049] */
+  background: var(--color-primary-hover); /* [cite: 1049] */
 }
 
 /* --- 5. Breakpoints (640px+ [cite: 1089]) --- */

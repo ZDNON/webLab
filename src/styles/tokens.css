@@ -6,6 +6,8 @@
   --color-text: #333333;       /* Primary text color */
   --color-muted: #aaaaaa;      /* Muted/Secondary text color */
   --color-border: #dddddd;     /* Border and divider color */
+  --color-primary-hover: #1D4ED8; /* Darker Blue for Hover [cite: 1049, 1053] */
+  --color-secondary: #7C3AED; /* Purple for variety [cite: 153] */
 
   /* --- Fluid Typography (Responsive text using clamp) --- */
   /* clamp(min, preferred, max) [cite: 322] */
