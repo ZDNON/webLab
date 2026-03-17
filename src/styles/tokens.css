@@ -1,0 +1,31 @@
+:root {
+  /* --- Color Palette (Based on your branding) --- */
+  --color-primary: #2563EB;    /* Main action color (Blue) */
+  --color-bg: #1a1a1a;         /* Dark body background */
+  --color-surface: #ffffff;    /* Card/Surface background */
+  --color-text: #333333;       /* Primary text color */
+  --color-muted: #aaaaaa;      /* Muted/Secondary text color */
+  --color-border: #dddddd;     /* Border and divider color */
+
+  /* --- Fluid Typography (Responsive text using clamp) --- */
+  /* clamp(min, preferred, max) [cite: 322] */
+  --text-sm: clamp(0.8rem, 0.7rem + 0.25vw, 0.9rem);
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem); /* Standard body text [cite: 340] */
+  --text-lg: clamp(1.125rem, 1rem + 0.6vw, 1.35rem);
+  --text-xl: clamp(1.25rem, 1rem + 1.2vw, 1.75rem);   /* Subheadings */
+  --text-2xl: clamp(1.5rem, 1rem + 2vw, 2.5rem);      /* Main headings [cite: 942] */
+
+  /* --- Spacing Scale --- */
+  --space-sm: 8px;   /* Small gaps/margins */
+  --space-md: 16px;  /* Medium gaps [cite: 175] */
+  --space-lg: 20px;  /* Large padding [cite: 932] */
+  --space-xl: 40px;  /* Extra large section spacing */
+
+  /* --- Border Radius --- */
+  --radius-md: 8px;   /* Default for inputs and buttons [cite: 200] */
+  --radius-lg: 16px;  /* For main cards [cite: 203] */
+  --radius-full: 50%; /* For circular avatars [cite: 972] */
+
+  /* --- Transitions --- */
+  --transition-fast: 150ms ease; /* Quick hover effects [cite: 255] */
+}
