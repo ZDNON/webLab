@@ -103,6 +103,8 @@ input {
 
 .submit-btn:hover {
   background: var(--color-primary-hover); /* [cite: 1049] */
+  transform: translateY(-2px); /* Subtle lift effect for better UX */
+  transition: all var(--transition-fast); /* [cite: 1042] */
 }
 
 /* --- 5. Breakpoints (640px+ [cite: 1089]) --- */
