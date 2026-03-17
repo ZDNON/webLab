@@ -1,82 +1,123 @@
+/* --- 1. Reset & Base Styles --- */
+* {
+  margin: 0; /* [cite: 891] */
+  padding: 0; /* [cite: 892] */
+  box-sizing: border-box; /* [cite: 893] */
+}
 
+body {
+  background-color: var(--color-bg); /* [cite: 914] */
+  color: var(--color-text); /* [cite: 912] */
+  font-family: var(--font-sans); /* [cite: 906] */
+  line-height: 1.6; /* [cite: 910] */
+  display: flex; /* Centering the card */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- 2. Accessibility --- */
 .skip-link {
   position: absolute;
   top: -100px;
   left: 0;
-  background: #2563EB;
+  background: var(--color-primary);
   color: white;
   padding: 10px;
   z-index: 100;
 }
-.skip-link:focus { top: 0; }
-:focus { outline: 3px solid #2563EB; outline-offset: 3px; }
-body {
-  background-color: #1a1a1a; 
-  color: #333;
-  font-family: system-ui, -apple-system, sans-serif;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; 
+
+.skip-link:focus { 
+  top: 0; 
 }
+
+:focus { 
+  outline: 3px solid var(--color-primary); 
+  outline-offset: 3px; 
+}
+
+/* --- 3. Layout (Mobile-First [cite: 58]) --- */
 .single-card {
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  padding: 40px;
-  width: 100%;
+  background: var(--color-surface); /* [cite: 792] */
+  border-radius: var(--radius-lg); /* [cite: 793] */
+  box-shadow: var(--shadow-md); /* [cite: 273] */
+  padding: var(--space-xl); /* [cite: 559] */
+  width: 90%; 
   max-width: 450px; 
   text-align: center;
-  box-sizing: border-box;
 }
+
 .avatar-circle {
   width: 100px;
   height: 100px;
-  background-color: #2563EB;
+  background-color: var(--color-primary); /* [cite: 1036] */
   color: white;
-  font-size: 60px;
+  font-size: var(--text-2xl); /* Fluid typography [cite: 942] */
   font-weight: bold;
-  border-radius: 50%;
+  border-radius: var(--radius-full); /* [cite: 972] */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto 20px;
+  margin: 0 auto var(--space-md);
 }
+
+/* --- 4. Forms --- */
 fieldset {
-  border: 1px solid #ddd;
-  padding: 20px;
-  border-radius: 8px;
+  border: 1px solid var(--color-border); /* [cite: 1005] */
+  padding: var(--space-lg); /* [cite: 932] */
+  border-radius: var(--radius-md); /* [cite: 1007] */
   text-align: left;
 }
-.form-group { margin-bottom: 1.2rem; }
+
+.form-group { 
+  margin-bottom: var(--space-md); /* [cite: 984] */
+}
+
 label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
+  display: block; /* [cite: 999] */
+  margin-bottom: var(--space-xs); /* [cite: 1000] */
+  font-weight: 600; /* [cite: 1001] */
 }
+
 input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  background-color: #fff; 
-  color: #333; 
-  border-radius: 6px;
-  box-sizing: border-box;
+  width: 100%; /* [cite: 1002] */
+  padding: var(--space-sm) var(--space-md); /* [cite: 1003] */
+  border: 1px solid var(--color-border); /* [cite: 1005] */
+  border-radius: var(--radius-md); /* [cite: 1007] */
+  font-size: var(--text-base); /* [cite: 1011] */
+  margin-top: 5px;
+  background-color: #f9f9f9; /* Extra visual fix */
 }
-.submit-btn { 
-  background: #2563EB; 
-  color: white; 
-  border: none; 
-  padding: 14px; 
+
+.submit-btn {
+  background: var(--color-primary); /* [cite: 1036] */
+  color: white;
+  padding: var(--space-sm) var(--space-lg); /* [cite: 1035] */
   width: 100%; 
-  border-radius: 6px; 
-  cursor: pointer; 
+  border: none; /* [cite: 1038] */
+  border-radius: var(--radius-md); /* [cite: 1039] */
+  cursor: pointer; /* [cite: 1041] */
   font-weight: bold;
-  margin-top: 10px;
+  transition: background var(--transition-fast);
 }
+
+.submit-btn:hover {
+  background: var(--color-primary-hover); /* [cite: 1049] */
+  transform: translateY(-2px); /* Subtle lift effect for better UX */
+  transition: all var(--transition-fast); /* [cite: 1042] */
+}
+
+/* --- 5. Breakpoints (640px+ [cite: 1089]) --- */
+@media (min-width: 640px) {
+  .submit-btn {
+    width: auto; /* [cite: 1115] */
+    padding: var(--space-sm) var(--space-xl);
+  }
+}
+
 .main-footer {
-  color: #aaa;
-  font-size: 0.8rem;
-  margin-top: 20px;
+  color: var(--color-muted); /* [cite: 1070] */
+  font-size: var(--text-sm); /* [cite: 1071] */
+  margin-top: var(--space-lg);
+  text-align: center; /* [cite: 1066] */
 }
